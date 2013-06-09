@@ -28,4 +28,19 @@ Vagrant.configure("2") do |config|
         vb.customize ["modifyvm", :id, "--memory", "512"]
     end
 
+    config.vm.provision :puppet do |puppet|
+        # defines the puppet folder
+        puppet.manifests_path = "vagrant/puppet"
+        # initial manifest
+        puppet.manifest_file = "init.pp"
+
+        # defines the puppet modules folder
+        puppet.module_path = "vagrant/modules"
+        # set puppet options
+        puppet.options = [
+                        '--verbose',
+                        '--debug'
+                      ]
+    end
+
 end
