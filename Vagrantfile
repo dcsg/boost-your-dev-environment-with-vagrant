@@ -17,4 +17,15 @@ Vagrant.configure("2") do |config|
     # Vagrant 1.1+ automatically ignores nfs on Windows OS
     config.vm.synced_folder ".", "/vagrant", :nfs => true
 
+    config.vm.provider "virtualbox" do |vb|
+
+        vb.name = "my_vm" # custom VM name
+
+        vb.gui = true     # enables GUI, defaults is false
+
+        # Vagrant exposes a way to call  any command against VBoxManage
+        # Example: Change the memory of the VM
+        vb.customize ["modifyvm", :id, "--memory", "512"]
+    end
+
 end
