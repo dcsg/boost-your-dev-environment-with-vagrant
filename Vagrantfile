@@ -14,9 +14,8 @@ Vagrant.configure("2") do |config|
     # nfs requires a static IP address
     config.vm.network :private_network, ip: "10.5.0.2"
 
-    # sharing folders
-    # Vagrant 1.1+ automatically ignores nfs on Windows OS
-    config.vm.synced_folder ".", "/vagrant", :nfs => true
+    # sharing folders, only enables nfs on *unix OS
+    config.vm.synced_folder ".", "/vagrant", :nfs => (RUBY_PLATFORM =~ /linux/ or RUBY_PLATFORM =~ /darwin/)
 
     config.vm.provider "virtualbox" do |vb|
 
