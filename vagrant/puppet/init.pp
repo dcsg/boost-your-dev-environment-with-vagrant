@@ -79,7 +79,7 @@ class create_table {
     command => 'mysql -u root -pvagrant < init.sql',
     cwd => '/vagrant',
     path => ["/bin", "/usr/bin"],
-    require => Mysql::Db['phplx'],
+    require => [Mysql::Db['phplx'], Class["Mysql"]],
   }
 }
 
