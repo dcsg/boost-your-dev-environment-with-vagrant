@@ -7,7 +7,8 @@ Vagrant.configure("2") do |config|
     config.vm.box_url = "http://files.vagrantup.com/precise64.box"
 
     # port forwarding
-    config.vm.network :forwarded_port, guest: 80, host: 8080
+    config.vm.network :forwarded_port, guest: 80, host: 8080, auto_correct: true
+    config.vm.network :forwarded_port, guest: 3306, host: 50003, auto_correct: true
 
     # setup a private network with a static IP Address
     # nfs requires a static IP address
@@ -21,7 +22,7 @@ Vagrant.configure("2") do |config|
 
         vb.name = "my_vm" # custom VM name
 
-        vb.gui = true     # enables GUI, defaults is false
+        #vb.gui = true     # enables GUI, defaults is false
 
         # Vagrant exposes a way to call  any command against VBoxManage
         # Example: Change the memory of the VM
@@ -39,7 +40,7 @@ Vagrant.configure("2") do |config|
         # set puppet options
         puppet.options = [
                         '--verbose',
-                        '--debug'
+                        #'--debug'
                       ]
     end
 
