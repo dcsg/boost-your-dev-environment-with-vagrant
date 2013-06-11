@@ -20,7 +20,7 @@ Vagrant.configure("2") do |config|
 
     config.vm.provider "virtualbox" do |vb|
 
-        vb.name = "my_vm" # custom VM name
+        vb.name = "phplx" # custom VM name
 
         #vb.gui = true     # enables GUI, defaults is false
 
