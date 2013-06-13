@@ -12,15 +12,19 @@ It is divide in 5 steps. Each step have his branch.
 * [Step Four](https://github.com/danielcsgomes/boost-your-dev-environment-with-vagrant/tree/step-four) - Example configuration of the Puppet provision in Vagrantfile and an example of a puppet manifest
 * [Step Five](https://github.com/danielcsgomes/boost-your-dev-environment-with-vagrant/tree/step-five) - Real world example (LAMP configuration)
 
+## Slides
+
+Slides of the presentation are available [here](https://joind.in/talk/view/8816)
+
 ## How to use
 
 #### From step 1 to 4
 
-Just run `vagrant up`
+Just run `vagrant up` or `vagrant reload` if the machine is already running
 
 #### On step five
 
-* Run `vagrant up`
+* Run `vagrant up` or `vagrant reload` if the machine is already running
 * open browser: `http://localhost:8080` and you should see three names if everything was ok
 * open browser: `http://localhost:8080/phpinfo.php` to view phpinfo
 
