@@ -4,6 +4,8 @@ This repository contains the source code of the exampls of my talk **Boost your 
 
 It is divide in 5 steps. Each step have his branch.
 
+[![endorse](https://api.coderwall.com/danielcsgomes/endorsecount.png)](https://coderwall.com/danielcsgomes)
+
 #### Steps:
 
 * [Step One](https://github.com/danielcsgomes/boost-your-dev-environment-with-vagrant/tree/step-one) - How to initialize Vagrant
